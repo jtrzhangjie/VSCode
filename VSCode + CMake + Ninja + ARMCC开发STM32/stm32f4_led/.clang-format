@@ -1,0 +1,360 @@
+---
+Language: Cpp
+
+# 基于哪个配置文件
+#BasedOnStyle:  WebKit
+
+# 访问说明符(public、private等)的偏移
+AccessModifierOffset: -4
+
+# 开括号(开圆括号、开尖括号、开方括号)后的对齐: Align, DontAlign, AlwaysBreak(总是在开括号后换行)
+AlignAfterOpenBracket: Align
+
+# 连续赋值时，对齐所有等号
+AlignConsecutiveAssignments: false
+
+# 连续声明时，对齐所有声明的变量名
+AlignConsecutiveDeclarations: false
+
+# 逃脱换行(使用反斜杠换行)的反斜杠(转义使用)
+AlignEscapedNewlines: Left
+
+# 操作数对齐方式
+AlignOperands: true
+
+# 尾随的注释对齐
+AlignTrailingComments: true
+
+# 允许函数声明的所有参数在放在一行
+AllowAllParametersOfDeclarationOnNextLine: true
+
+# 允许短的块放在同一行
+AllowShortBlocksOnASingleLine: false
+
+# 允许短的case标签放在同一行
+AllowShortCaseLabelsOnASingleLine: false
+
+# 允许短的函数放在同一行
+AllowShortFunctionsOnASingleLine: false
+
+# 允许短的if语句保持在同一行
+AllowShortIfStatementsOnASingleLine: false
+
+# 允许短的循环while保持在同一行
+AllowShortLoopsOnASingleLine: false
+
+# 总是在定义返回类型后中断(此项已弃用，为了向后兼容而保留)
+AlwaysBreakAfterDefinitionReturnType: None
+
+# 总是在返回类型后换行
+AlwaysBreakAfterReturnType: None
+
+# 总是在多行string字面量前换行
+AlwaysBreakBeforeMultilineStrings: true
+
+# 总是在template声明后换行
+AlwaysBreakTemplateDeclarations: Yes
+
+# 表示函数实参要么都在同一行，要么都各自一行
+BinPackArguments: true
+
+# false表示所有形参要么都在同一行，要么都各自一行
+BinPackParameters: true
+
+# 大括号换行 只有当BreakBeforeBraces = Custom时才生效
+BraceWrapping:
+
+  # class定义后面
+  AfterClass: false
+
+  # 控制语句后面
+  AfterControlStatement: false
+
+  # enum定义后面
+  AfterEnum: false
+
+  # 函数定义后面
+  AfterFunction: false
+
+  # 命名空间后面
+  AfterNamespace: false
+
+  # Object定义后面
+  AfterObjCDeclaration: false
+
+  # 结构体后面
+  AfterStruct: false
+
+  # union定义后面
+  AfterUnion: false
+
+  # extern block之后
+  AfterExternBlock: false
+
+  # catch之前
+  BeforeCatch: false
+
+  # else之前
+  BeforeElse: false
+
+  # 缩进大括号
+  IndentBraces: false
+
+  # 空函数体
+  SplitEmptyFunction: true
+
+  # 空类
+  SplitEmptyRecord: true
+
+  # 空命名空间
+  SplitEmptyNamespace: true
+
+#  在二元运算符前换行
+BreakBeforeBinaryOperators: None
+
+# 使用的配置方案
+BreakBeforeBraces: Allman
+
+#
+BreakBeforeInheritanceComma: false
+
+# 要使用的继承列表样式
+BreakInheritanceList: BeforeColon
+
+# 在三元运算符前换行
+BreakBeforeTernaryOperators: true
+
+# 在构造函数的初始化列表的逗号前换行
+BreakConstructorInitializersBeforeComma: false
+
+# 在构造函数初始化时按逗号断行，并以冒号对齐
+BreakConstructorInitializers: BeforeColon
+
+# 在 Java 文件中字段的每个注释后中断。
+BreakAfterJavaFieldAnnotations: false
+
+# 
+BreakStringLiterals: true
+
+# 每行字符的限制，0表示没有限制
+ColumnLimit: 118
+
+# 描述具有特殊含义的注释的正则表达式， 不应拆分为行或以其他方式更改 
+CommentPragmas: '^ IWYU pragma:'
+
+# 连续的命名空间声明将在同一 线。如果 ，则每个命名空间都在新行上声明
+CompactNamespaces: false
+
+# 构造函数的初始化列表要么都在同一行，要么都各自一行
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+
+# 构造函数的初始化列表的缩进宽度
+ConstructorInitializerIndentWidth: 4
+
+# 延续的行的缩进宽度
+ContinuationIndentWidth: 4
+
+# 去除C++11的列表初始化的大括号{后和}前的空格
+Cpp11BracedListStyle: true
+
+# 继承最常用的指针和引用的对齐方式
+DerivePointerAlignment: true
+
+# 关闭格式化
+DisableFormat: false
+
+# 自动检测函数的调用和定义是否被格式为每行一个参数
+ExperimentalAutoDetectBinPacking: false
+
+# 如果 ，clang-format 添加缺少的命名空间结束注释 命名空间并修复无效的现有命名空间
+FixNamespaceComments: true
+
+# 应解释为 foreach 循环的宏向量 而不是作为函数调用。
+ForEachMacros:
+  - foreach
+  - Q_FOREACH
+  - BOOST_FOREACH
+
+# 根据值，可以对多个块进行排序 作为一个，并根据类别划分  
+IncludeBlocks: Preserve
+
+# 表示用于排序的不同类别的正则表达式
+IncludeCategories:
+  - Regex: '^<ext/.*\.h>'
+    Priority: 2
+  - Regex: '^<.*\.h>'
+    Priority: 1
+  - Regex: '^<.*'
+    Priority: 2
+  - Regex: '.*'
+    Priority: 3
+
+# 指定文件到主包含映射中允许的后缀的正则表达式。
+IncludeIsMainRegex: '([-_](test|unittest))?$'
+
+# 缩进大小写从switch语句中标记一个级别。
+IndentCaseLabels: true
+
+# 要使用的预处理器指令缩进样式。
+IndentPPDirectives: None
+
+# 用于缩进的列数。
+IndentWidth: 4
+
+# 如果函数定义或声明被包装在类型之后，则缩进。
+IndentWrappedFunctionNames: false
+
+# 用于JavaScript字符串的JavaScriptQuoteStyle。
+JavaScriptQuotes: Leave
+
+# 是否包装JavaScript导入/导出语句。
+JavaScriptWrapImports: true
+
+# 如果为真，则保留块开始处的空行。
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# 匹配开始一个块的宏的正则表达式。
+MacroBlockBegin: ''
+
+# 匹配块结尾宏的正则表达式。
+MacroBlockEnd: ''
+
+# 要保留的连续空行的最大数目。
+MaxEmptyLinesToKeep: 1
+
+# 命名空间使用的缩进。
+NamespaceIndentation: None
+
+# 控制将Objective-C协议一致性列表项打包成尽可能少的行
+ObjCBinPackProtocolList: Never
+
+# 用于ObjC块缩进的字符数。
+ObjCBlockIndentWidth: 2
+
+# 在Objective-C中添加空格，即使用代替
+ObjCSpaceAfterProperty: false
+
+# 在Objective-C协议列表前添加一个空格，即使用代替
+ObjCSpaceBeforeProtocolList: true
+
+# 破坏赋值操作符的惩罚。
+PenaltyBreakAssignment: 2
+
+# 在.call之后中断函数调用的惩罚(
+PenaltyBreakBeforeFirstCallParameter: 1
+
+# 在注释中引入的每一个换行符的惩罚。
+PenaltyBreakComment: 300
+
+# 在第一个之前打破的处罚。<<
+PenaltyBreakFirstLessLess: 120
+
+# 在字符串字面量中引入的每一个换行符的惩罚。
+PenaltyBreakString: 1000
+
+# 模板声明后破坏的惩罚。
+PenaltyBreakTemplateDeclaration: 10
+
+# 对于列限制以外的每个字符的惩罚。
+PenaltyExcessCharacter: 1000000
+
+# 将函数的返回类型放到自己的行上的惩罚。
+PenaltyReturnTypeOnItsOwnLine: 200
+
+# 指针和引用对齐样式。
+PointerAlignment: Left
+
+# 定义在原始字符串中检测受支持语言代码块的提示。
+RawStringFormats:
+  - Language: Cpp
+    Delimiters:
+      - cc
+      - CC
+      - cpp
+      - Cpp
+      - CPP
+      - 'c++'
+      - 'C++'
+    CanonicalDelimiter: ''
+    BasedOnStyle: google
+  - Language: TextProto
+    Delimiters:
+      - pb
+      - PB
+      - proto
+      - PROTO
+    EnclosingFunctions:
+      - EqualsProto
+      - EquivToProto
+      - PARSE_PARTIAL_TEXT_PROTO
+      - PARSE_TEST_PROTO
+      - PARSE_TEXT_PROTO
+      - ParseTextOrDie
+      - ParseTextProtoOrDie
+    CanonicalDelimiter: ''
+    BasedOnStyle: google
+
+# clang-format将尝试重新流注释。    
+ReflowComments: true
+
+# 控制clang-format是否以及如何排序。
+SortIncludes: true
+
+# 控制clang-format是否以及如何使用声明进行排序。
+SortUsingDeclarations: true
+
+# 如果，在C风格类型转换.true之后插入一个空格
+SpaceAfterCStyleCast: false
+
+# 如果，将在' template '关键字.true后插入一个空格
+SpaceAfterTemplateKeyword: true
+
+# 如果，空格将在赋值操作符.false之前删除
+SpaceBeforeAssignmentOperators: true
+
+# If，在c++ 11用于初始化对象的带括号列表(前面的标识符或类型之后).true之前插入一个空格
+SpaceBeforeCpp11BracedList: false
+
+# 如果，空格将在构造函数初始化式colon.false之前删除
+SpaceBeforeCtorInitializerColon: true
+
+# 
+SpaceBeforeInheritanceColon: true
+
+# 定义在哪种情况下在开括号前加空格。
+SpaceBeforeParens: ControlStatements
+
+# If，则在基于范围的for循环colon.false之前删除空格
+SpaceBeforeRangeBasedForLoopColon: true
+
+# 如果，.true()中可以插入空格
+SpaceInEmptyParentheses: false
+
+# 尾随行注释(- comments)前的空格数
+SpacesBeforeTrailingComments: 2
+
+# 用于模板参数列表的SpacesInAnglesStyle。
+SpacesInAngles: false
+
+# If，空格被插入到容器字面量中(例如ObjC和Javascript数组和字典字面量).true
+SpacesInContainerLiterals: true
+
+# 如果，空格可以插入到C样式转换中。true
+SpacesInCStyleCastParentheses: false
+
+# If，在.true()前后插入空格
+SpacesInParentheses: false
+
+# 如果，则在前后插入空格。没有参数或未指定大小的数组声明的lambda不会受到影响。true[]
+SpacesInSquareBrackets: false
+
+# 解析和格式化与此标准兼容的c++结构。
+Standard: Cpp11
+
+# 用于制表位的列数。
+TabWidth: 4
+
+# 在结果文件中使用制表符的方法。
+UseTab: Always
+...
+

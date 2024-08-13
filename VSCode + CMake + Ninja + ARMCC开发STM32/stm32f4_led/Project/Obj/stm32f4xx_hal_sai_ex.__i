@@ -1,0 +1,4 @@
+--gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\STM32F4_HALLIB\Inc\Legacy -I ..\STM32F4_HALLIB\Inc -I ..\User -I ..\CMSIS -I ..\Code
+-ID:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+-D__UVISION_VERSION="538" -DSTM32F429xx -DSTM32F429xx -DUSE_HAL_DRIVER
+-o .\obj\stm32f4xx_hal_sai_ex.o --omf_browse .\obj\stm32f4xx_hal_sai_ex.crf --depend .\obj\stm32f4xx_hal_sai_ex.d "..\STM32F4_HALLIB\Src\stm32f4xx_hal_sai_ex.c"
